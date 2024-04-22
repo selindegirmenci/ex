@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import Firebase
+import Highcharts
 
 @main
 struct exApp: App {
+    init() {
+        FirebaseApp.configure()
+        HIChartView.preload()
+    }
+
     var body: some Scene {
         WindowGroup {
             //SplashScreenView()
-            ContentView()
+            LoginView()
                 .padding()
         }
     }

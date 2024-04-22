@@ -1,172 +1,113 @@
 import SwiftUI
 import PDFKit
+import UniformTypeIdentifiers
 
-/*
-struct DocumentView: View {
-    // Creating a URL for the PDF and saving it in the pdfUrl variable
-    let pdfUrl = Bundle.main.url(forResource: "fab1Generator", withExtension: "pdf")!
-    @State private var displayMode: PDFDisplayMode = .singlePage // Initial display mode
-    
-    var body: some View {
-        VStack {
-            Image(systemName: "doc.viewfinder")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("PDF Viewer")
-                .foregroundColor(.accentColor)
-            PDFKitView(url: pdfUrl, displayMode: $displayMode)
-                .onAppear {
-                    // Set initial display mode or other configurations
-                    PDFView.appearance().displayMode = displayMode
-                }
-                .scaledToFill()
-        }
-        .padding()
+struct docContentView: View {
+    @State private var pdfURLs: [URL]
+    @State private var showingDocumentPicker = false
+
+    init() {
+        // Hardcoded sample PDFs
+        let hardcodedPDFs = [
+            Bundle.main.url(forResource: "fab1Generator", withExtension: "pdf")!,
+            Bundle.main.url(forResource: "testPDF", withExtension: "pdf")!,
+            Bundle.main.url(forResource: "generator", withExtension: "pdf")!
+        ]
+        self._pdfURLs = State(initialValue: hardcodedPDFs)
     }
-}
-
-struct PDFKitView: UIViewRepresentable {
-    let url: URL // new variable to get the URL of the document
-    @Binding var displayMode: PDFDisplayMode // To bind the display mode
-
-    func makeUIView(context: Context) -> PDFView {
-        // Creating a new PDFView and adding a document to it
-        let pdfView = PDFView()
-        pdfView.document = PDFDocument(url: self.url)
-        pdfView.displayMode = displayMode // Set the initial display mode
-        return pdfView
-    }
-    
-    func updateUIView(_ uiView: PDFView, context: Context) {
-        uiView.displayMode = displayMode // Update the display mode if it changes
-    }
-}
-*/
-
-struct DocumentView: View {
-  
-    let pdfUrl = Bundle.main.url(forResource: "fab1Generator", withExtension: "pdf")!
-    @State private var displayMode: PDFDisplayMode = .singlePageContinuous //.singlePage
-    @State private var pdfScale: CGFloat = 1.0 // Variable to hold the scale factor
 
     var body: some View {
-        VStack {
-            Image(systemName: "doc.viewfinder")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("PDF Viewer")
-                .foregroundColor(.accentColor)
-            PDFKitView(url: pdfUrl, displayMode: $displayMode, pdfScale: $pdfScale)
-                .onAppear {
-                    // Set initial display mode or other configurations
-                    PDFView.appearance().displayMode = displayMode
-                }
-                .gesture(MagnificationGesture()
-                    .onChanged { scale in
-                        pdfScale = scale
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(pdfURLs, id: \.self) { pdfURL in
+                        NavigationLink(destination: newestPDFViewer(pdfURL: pdfURL)) {
+                            Text(pdfURL.lastPathComponent)
+                        }
                     }
-                )
-                .scaledToFill()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-        .padding()
-    }
-}
-
-struct PDFKitView: UIViewRepresentable {
-    let url: URL // new variable to get the URL of the document
-    @Binding var displayMode: PDFDisplayMode // To bind the display mode
-    @Binding var pdfScale: CGFloat // To bind the scale factor
-
-    func makeUIView(context: Context) -> PDFView {
-        // Creating a new PDFView and adding a document to it
-        let pdfView = PDFView()
-        pdfView.document = PDFDocument(url: self.url)
-        //pdfView.displayMode = displayMode // Set the initial display mode
-        pdfView.displayMode = .singlePageContinuous
-        pdfView.autoScales = true // Enable auto scaling
-        pdfView.minScaleFactor = pdfView.scaleFactorForSizeToFit // Set the minimum scale factor
-        pdfView.usePageViewController(true)
-        return pdfView
-    }
-    
-    func updateUIView(_ uiView: PDFView, context: Context) {
-       // uiView.displayMode = displayMode // Update the display mode if it changes
-       // uiView.scaleFactor = pdfScale // Update the scale factor
-    }
-}
-   
-/*
-struct DocumentView: View {
-    let pdfUrl = Bundle.main.url(forResource: "fab1Generator", withExtension: "pdf")!
-    @State private var displayMode: PDFDisplayMode = .singlePage
-    @State private var pdfScale: CGFloat = 1.0 // Variable to hold the scale factor
-
-    var body: some View {
-        PDFKitViewController(url: pdfUrl, displayMode: $displayMode, pdfScale: $pdfScale)
-            .onAppear {
-                // Set initial display mode or other configurations
-                PDFView.appearance().displayMode = displayMode
+                    .onDelete(perform: deletePDF) // Enable swipe-to-delete
+                }
             }
-            .gesture(MagnificationGesture()
-                .onChanged { scale in
-                    pdfScale = scale
+            .navigationTitle("Documents")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    // Show document picker
+                    showingDocumentPicker.toggle()
+                }) {
+                    Image(systemName: "plus")
+                        .foregroundColor(.blue)
                 }
             )
-            .scaledToFit() // Ensure the view scales properly
+            .sheet(isPresented: $showingDocumentPicker) {
+                DocumentPickerView(pdfURLs: $pdfURLs)
+            }
+        }
+    }
+
+    func deletePDF(at offsets: IndexSet) {
+        pdfURLs.remove(atOffsets: offsets)
     }
 }
 
-struct PDFKitViewController: UIViewControllerRepresentable {
-    let url: URL
-    @Binding var displayMode: PDFDisplayMode
-    @Binding var pdfScale: CGFloat
 
-    class Coordinator: NSObject, UIScrollViewDelegate {
-        var parent: PDFKitViewController
-
-        init(parent: PDFKitViewController) {
-            self.parent = parent
-        }
-
-        func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-            parent.pdfScale = scale
-        }
-    }
+struct DocumentPickerView: UIViewControllerRepresentable {
+    @Binding var pdfURLs: [URL]
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(parent: self)
+        Coordinator(self)
     }
 
-    func makeUIViewController(context: Context) -> UIViewController {
-        let pdfViewController = UIViewController()
-        let pdfView = PDFView()
-        pdfView.document = PDFDocument(url: url)
-        pdfView.displayMode = displayMode
-        pdfView.autoScales = true
-        pdfView.minScaleFactor = pdfView.scaleFactorForSizeToFit
-
-        let scrollView = UIScrollView()
-        scrollView.addSubview(pdfView)
-        scrollView.delegate = context.coordinator
-
-        pdfViewController.view = scrollView
-        return pdfViewController
+    func makeUIViewController(context: Context) -> UIDocumentPickerViewController {
+        let documentPicker = UIDocumentPickerViewController(forOpeningContentTypes: [UTType.pdf], asCopy: true)
+        documentPicker.delegate = context.coordinator
+        return documentPicker
     }
 
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-        if let scrollView = uiViewController.view as? UIScrollView, let pdfView = scrollView.subviews.first as? PDFView {
-            pdfView.displayMode = displayMode
-            pdfView.scaleFactor = pdfScale
+    func updateUIViewController(_ uiViewController: UIDocumentPickerViewController, context: Context) {
+    }
+
+    class Coordinator: NSObject, UIDocumentPickerDelegate {
+        var parent: DocumentPickerView
+
+        init(_ documentPickerView: DocumentPickerView) {
+            self.parent = documentPickerView
+        }
+
+        func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+            parent.pdfURLs.append(contentsOf: urls)
         }
     }
 }
 
+struct newestPDFViewer: View {
+    let pdfURL: URL
 
-
-struct DocumentView_Preview: PreviewProvider {
-    static var previews: some View {
-        DocumentView()
+    var body: some View {
+        newestPDFKitView(url: pdfURL)
+            .navigationBarTitle(Text(pdfURL.lastPathComponent), displayMode: .inline)
     }
 }
- */
+
+struct newestPDFKitView: UIViewRepresentable {
+    let url: URL
+
+    func makeUIView(context: Context) -> PDFView {
+        let pdfView = PDFView()
+        pdfView.document = PDFDocument(url: url)
+        pdfView.autoScales = true
+        return pdfView
+    }
+
+    func updateUIView(_ uiView: PDFView, context: Context) {}
+}
+
+struct docContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        docContentView()
+    }
+}
+
+
+
+
+

@@ -7,24 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04159F6D2BB5D75900C7EC21 /* Highcharts in Frameworks */ = {isa = PBXBuildFile; productRef = 04159F6C2BB5D75900C7EC21 /* Highcharts */; };
+		04159F762BB5FEE200C7EC21 /* TankData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04159F752BB5FEE200C7EC21 /* TankData.swift */; };
 		041D9C772AF4213A00407609 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041D9C762AF4213A00407609 /* DocumentView.swift */; };
-		041D9C7B2AF4245900407609 /* fab1Generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 041D9C7A2AF4245900407609 /* fab1Generator.pdf */; };
+		043D68102BC39C1B00671D4D /* finalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D680F2BC39C1B00671D4D /* finalTest.swift */; };
+		043D68162BC45F1300671D4D /* fab1Generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68152BC45F1300671D4D /* fab1Generator.pdf */; };
+		043D68182BC45F4A00671D4D /* testPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68172BC45F4A00671D4D /* testPDF.pdf */; };
+		043D681A2BC45FA800671D4D /* generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68192BC45FA800671D4D /* generator.pdf */; };
+		04659B8B2B129E0300BAF621 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04659B8A2B129E0300BAF621 /* FirebaseAuth */; };
+		04659B8D2B129E0300BAF621 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 04659B8C2B129E0300BAF621 /* FirebaseFirestore */; };
+		04659B8F2B129ED200BAF621 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04659B8E2B129ED200BAF621 /* GoogleService-Info.plist */; };
+		04659B912B12A1FA00BAF621 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04659B902B12A1FA00BAF621 /* LoginView.swift */; };
 		047348822AE853C7000E99C6 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047348812AE853C7000E99C6 /* CameraView.swift */; };
 		047348862AE857F1000E99C6 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047348852AE857F1000E99C6 /* Permission.swift */; };
 		047348882AE871AF000E99C6 /* QRScannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047348872AE871AF000E99C6 /* QRScannerDelegate.swift */; };
-		048DD3FF2AEF2541004ED392 /* sampleValues.csv in Resources */ = {isa = PBXBuildFile; fileRef = 048DD3FE2AEF2541004ED392 /* sampleValues.csv */; };
 		04BD60042ADC83A400B12575 /* exApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60032ADC83A400B12575 /* exApp.swift */; };
-		04BD60062ADC83A400B12575 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60052ADC83A400B12575 /* ContentView.swift */; };
 		04BD60082ADC83A600B12575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD60072ADC83A600B12575 /* Assets.xcassets */; };
 		04BD600B2ADC83A600B12575 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BD600A2ADC83A600B12575 /* Preview Assets.xcassets */; };
 		04BD60152ADC83A600B12575 /* exTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60142ADC83A600B12575 /* exTests.swift */; };
 		04BD601F2ADC83A600B12575 /* exUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD601E2ADC83A600B12575 /* exUITests.swift */; };
 		04BD60212ADC83A600B12575 /* exUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD60202ADC83A600B12575 /* exUITestsLaunchTests.swift */; };
 		04BD60A62AE2FF7C00B12575 /* GaugeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 04BD60A52AE2FF7C00B12575 /* GaugeKit */; };
+		04BE00232BC46B3F00D9A587 /* testPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68172BC45F4A00671D4D /* testPDF.pdf */; };
+		04BE00242BC46B4000D9A587 /* testPDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68172BC45F4A00671D4D /* testPDF.pdf */; };
+		04BE00252BC46B4300D9A587 /* fab1Generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68152BC45F1300671D4D /* fab1Generator.pdf */; };
+		04BE00262BC46B4300D9A587 /* fab1Generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68152BC45F1300671D4D /* fab1Generator.pdf */; };
+		04BE00272BC46B4500D9A587 /* generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68192BC45FA800671D4D /* generator.pdf */; };
+		04BE00282BC46B4600D9A587 /* generator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 043D68192BC45FA800671D4D /* generator.pdf */; };
+		04BE002C2BC4A57500D9A587 /* Turbo-_Generator_1986.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 04BE002B2BC4A57500D9A587 /* Turbo-_Generator_1986.usdz */; };
 		04C731BA2AE61D4B0032F648 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 04C731B92AE61D4B0032F648 /* SwiftUICharts */; };
 		04C731BC2AE6581B0032F648 /* qrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C731BB2AE6581B0032F648 /* qrReader.swift */; };
-		04C731BE2AE6C4FF0032F648 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C731BD2AE6C4FF0032F648 /* SplashScreenView.swift */; };
-		04F31E7D2AE97BB7003ABBE7 /* chartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F31E7C2AE97BB7003ABBE7 /* chartView.swift */; };
+		04C9FC832B16496C0035A789 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 04C9FC822B16496C0035A789 /* FirebaseDatabase */; };
+		04C9FC8B2B166C4C0035A789 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 04C9FC8A2B166C4C0035A789 /* FirebaseDatabaseSwift */; };
+		04C9FC8D2B166E9B0035A789 /* networkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C9FC8C2B166E9B0035A789 /* networkCheck.swift */; };
+		04D9F2BF2BC78E8E00D6DF80 /* chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9F2BE2BC78E8E00D6DF80 /* chart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,15 +61,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04159F752BB5FEE200C7EC21 /* TankData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankData.swift; sourceTree = "<group>"; };
 		041D9C762AF4213A00407609 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
-		041D9C7A2AF4245900407609 /* fab1Generator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = fab1Generator.pdf; sourceTree = "<group>"; };
+		043D680F2BC39C1B00671D4D /* finalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalTest.swift; sourceTree = "<group>"; };
+		043D68152BC45F1300671D4D /* fab1Generator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = fab1Generator.pdf; sourceTree = "<group>"; };
+		043D68172BC45F4A00671D4D /* testPDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testPDF.pdf; sourceTree = "<group>"; };
+		043D68192BC45FA800671D4D /* generator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = generator.pdf; sourceTree = "<group>"; };
+		04659B8E2B129ED200BAF621 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04659B902B12A1FA00BAF621 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		047348812AE853C7000E99C6 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		047348852AE857F1000E99C6 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		047348872AE871AF000E99C6 /* QRScannerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerDelegate.swift; sourceTree = "<group>"; };
-		048DD3FE2AEF2541004ED392 /* sampleValues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sampleValues.csv; sourceTree = "<group>"; };
 		04BD60002ADC83A400B12575 /* ex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD60032ADC83A400B12575 /* exApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exApp.swift; sourceTree = "<group>"; };
-		04BD60052ADC83A400B12575 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04BD60072ADC83A600B12575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BD600A2ADC83A600B12575 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04BD60102ADC83A600B12575 /* exTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,9 +81,10 @@
 		04BD601A2ADC83A600B12575 /* exUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD601E2ADC83A600B12575 /* exUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exUITests.swift; sourceTree = "<group>"; };
 		04BD60202ADC83A600B12575 /* exUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04BE002B2BC4A57500D9A587 /* Turbo-_Generator_1986.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "Turbo-_Generator_1986.usdz"; sourceTree = "<group>"; };
 		04C731BB2AE6581B0032F648 /* qrReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrReader.swift; sourceTree = "<group>"; };
-		04C731BD2AE6C4FF0032F648 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		04F31E7C2AE97BB7003ABBE7 /* chartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chartView.swift; sourceTree = "<group>"; };
+		04C9FC8C2B166E9B0035A789 /* networkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkCheck.swift; sourceTree = "<group>"; };
+		04D9F2BE2BC78E8E00D6DF80 /* chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +92,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C9FC8B2B166C4C0035A789 /* FirebaseDatabaseSwift in Frameworks */,
+				04C9FC832B16496C0035A789 /* FirebaseDatabase in Frameworks */,
 				04C731BA2AE61D4B0032F648 /* SwiftUICharts in Frameworks */,
+				04659B8D2B129E0300BAF621 /* FirebaseFirestore in Frameworks */,
+				04659B8B2B129E0300BAF621 /* FirebaseAuth in Frameworks */,
 				04BD60A62AE2FF7C00B12575 /* GaugeKit in Frameworks */,
+				04159F6D2BB5D75900C7EC21 /* Highcharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,16 +161,21 @@
 		04BD60022ADC83A400B12575 /* ex */ = {
 			isa = PBXGroup;
 			children = (
-				041D9C7A2AF4245900407609 /* fab1Generator.pdf */,
-				048DD3FE2AEF2541004ED392 /* sampleValues.csv */,
+				04159F752BB5FEE200C7EC21 /* TankData.swift */,
+				04C9FC8C2B166E9B0035A789 /* networkCheck.swift */,
+				04659B8E2B129ED200BAF621 /* GoogleService-Info.plist */,
 				047348832AE857A5000E99C6 /* QRCodeScanner */,
 				04BD60032ADC83A400B12575 /* exApp.swift */,
-				04F31E7C2AE97BB7003ABBE7 /* chartView.swift */,
-				04BD60052ADC83A400B12575 /* ContentView.swift */,
+				04659B902B12A1FA00BAF621 /* LoginView.swift */,
 				041D9C762AF4213A00407609 /* DocumentView.swift */,
-				04C731BD2AE6C4FF0032F648 /* SplashScreenView.swift */,
 				04BD60072ADC83A600B12575 /* Assets.xcassets */,
+				043D68172BC45F4A00671D4D /* testPDF.pdf */,
+				043D68152BC45F1300671D4D /* fab1Generator.pdf */,
+				043D68192BC45FA800671D4D /* generator.pdf */,
+				04BE002B2BC4A57500D9A587 /* Turbo-_Generator_1986.usdz */,
 				04BD60092ADC83A600B12575 /* Preview Content */,
+				043D680F2BC39C1B00671D4D /* finalTest.swift */,
+				04D9F2BE2BC78E8E00D6DF80 /* chart.swift */,
 			);
 			path = ex;
 			sourceTree = "<group>";
@@ -193,6 +224,11 @@
 			packageProductDependencies = (
 				04BD60A52AE2FF7C00B12575 /* GaugeKit */,
 				04C731B92AE61D4B0032F648 /* SwiftUICharts */,
+				04659B8A2B129E0300BAF621 /* FirebaseAuth */,
+				04659B8C2B129E0300BAF621 /* FirebaseFirestore */,
+				04C9FC822B16496C0035A789 /* FirebaseDatabase */,
+				04C9FC8A2B166C4C0035A789 /* FirebaseDatabaseSwift */,
+				04159F6C2BB5D75900C7EC21 /* Highcharts */,
 			);
 			productName = ex;
 			productReference = 04BD60002ADC83A400B12575 /* ex.app */;
@@ -269,6 +305,8 @@
 			packageReferences = (
 				04BD60A42AE2FF7C00B12575 /* XCRemoteSwiftPackageReference "GaugeKit" */,
 				04C731B82AE61D4B0032F648 /* XCRemoteSwiftPackageReference "ChartView" */,
+				04659B892B129E0300BAF621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				04159F6B2BB5D75900C7EC21 /* XCRemoteSwiftPackageReference "highcharts-ios" */,
 			);
 			productRefGroup = 04BD60012ADC83A400B12575 /* Products */;
 			projectDirPath = "";
@@ -286,9 +324,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048DD3FF2AEF2541004ED392 /* sampleValues.csv in Resources */,
+				043D681A2BC45FA800671D4D /* generator.pdf in Resources */,
 				04BD600B2ADC83A600B12575 /* Preview Assets.xcassets in Resources */,
-				041D9C7B2AF4245900407609 /* fab1Generator.pdf in Resources */,
+				04BE002C2BC4A57500D9A587 /* Turbo-_Generator_1986.usdz in Resources */,
+				04659B8F2B129ED200BAF621 /* GoogleService-Info.plist in Resources */,
+				043D68182BC45F4A00671D4D /* testPDF.pdf in Resources */,
+				043D68162BC45F1300671D4D /* fab1Generator.pdf in Resources */,
 				04BD60082ADC83A600B12575 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +338,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BE00252BC46B4300D9A587 /* fab1Generator.pdf in Resources */,
+				04BE00232BC46B3F00D9A587 /* testPDF.pdf in Resources */,
+				04BE00282BC46B4600D9A587 /* generator.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +348,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BE00262BC46B4300D9A587 /* fab1Generator.pdf in Resources */,
+				04BE00242BC46B4000D9A587 /* testPDF.pdf in Resources */,
+				04BE00272BC46B4500D9A587 /* generator.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +362,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C731BC2AE6581B0032F648 /* qrReader.swift in Sources */,
-				04BD60062ADC83A400B12575 /* ContentView.swift in Sources */,
+				04159F762BB5FEE200C7EC21 /* TankData.swift in Sources */,
 				047348862AE857F1000E99C6 /* Permission.swift in Sources */,
+				04D9F2BF2BC78E8E00D6DF80 /* chart.swift in Sources */,
+				04C9FC8D2B166E9B0035A789 /* networkCheck.swift in Sources */,
 				04BD60042ADC83A400B12575 /* exApp.swift in Sources */,
 				047348882AE871AF000E99C6 /* QRScannerDelegate.swift in Sources */,
 				047348822AE853C7000E99C6 /* CameraView.swift in Sources */,
-				04C731BE2AE6C4FF0032F648 /* SplashScreenView.swift in Sources */,
 				041D9C772AF4213A00407609 /* DocumentView.swift in Sources */,
-				04F31E7D2AE97BB7003ABBE7 /* chartView.swift in Sources */,
+				043D68102BC39C1B00671D4D /* finalTest.swift in Sources */,
+				04659B912B12A1FA00BAF621 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,7 +550,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.capstone.generator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -532,7 +581,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = self.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.capstone.generator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -654,6 +703,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		04159F6B2BB5D75900C7EC21 /* XCRemoteSwiftPackageReference "highcharts-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/highcharts/highcharts-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.4.0;
+			};
+		};
+		04659B892B129E0300BAF621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
 		04BD60A42AE2FF7C00B12575 /* XCRemoteSwiftPackageReference "GaugeKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/antonmartinsson/GaugeKit";
@@ -673,6 +738,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		04159F6C2BB5D75900C7EC21 /* Highcharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04159F6B2BB5D75900C7EC21 /* XCRemoteSwiftPackageReference "highcharts-ios" */;
+			productName = Highcharts;
+		};
+		04659B8A2B129E0300BAF621 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04659B892B129E0300BAF621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		04659B8C2B129E0300BAF621 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04659B892B129E0300BAF621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		04BD60A52AE2FF7C00B12575 /* GaugeKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04BD60A42AE2FF7C00B12575 /* XCRemoteSwiftPackageReference "GaugeKit" */;
@@ -682,6 +762,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04C731B82AE61D4B0032F648 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		04C9FC822B16496C0035A789 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04659B892B129E0300BAF621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		04C9FC8A2B166C4C0035A789 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04659B892B129E0300BAF621 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
